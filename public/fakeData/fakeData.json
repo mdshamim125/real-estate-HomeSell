@@ -1,0 +1,76 @@
+{
+  "residential": [
+    {
+      "id": 1,
+      "estate_title": "Luxury Villa with Ocean View",
+      "segment_name": "Residential",
+      "description": "Experience luxury living with breathtaking ocean views in this spacious villa.",
+      "price": "$1,500,000",
+      "status": "sale",
+      "area": "5,000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["Swimming Pool", "Spa", "Home Theater", "Gym"],
+      "image": "https://i.ibb.co/LhZYd79/pexels-jonathan-borba-5563472.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Modern Loft in the Heart of Downtown",
+      "segment_name": "Residential",
+      "description": "Stylish and contemporary loft apartment located in the vibrant downtown area.",
+      "price": "$800,000",
+      "status": "sale",
+      "area": "1,200 sq ft",
+      "location": "New York City, New York",
+      "facilities": ["Open Concept Design", "Roof Terrace", "Fitness Center"],
+      "image": "https://i.ibb.co/k2h8P7P/pexels-wendy-wei-20337840.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Cozy Family Home with Garden",
+      "segment_name": "Residential",
+      "description": "Charming family home with a spacious garden, perfect for outdoor gatherings.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "2,500 sq ft",
+      "location": "Austin, Texas",
+      "facilities": ["Backyard Garden", "Fireplace", "Study Room"],
+      "image": "https://i.ibb.co/m6nZd1V/pexels-pixabay-259593.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Luxury Penthouse with City Views",
+      "segment_name": "Residential",
+      "description": "Elegant penthouse offering panoramic city views and upscale amenities.",
+      "price": "$2,200,000",
+      "status": "sale",
+      "area": "3,800 sq ft",
+      "location": "Los Angeles, California",
+      "facilities": ["Private Terrace", "Concierge Service", "Wine Cellar"],
+      "image": "https://i.ibb.co/3CVyBZy/pexels-mikita-yo-18252195.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Spacious Family House in Suburban Neighborhood",
+      "segment_name": "Residential",
+      "description": "This spacious family house offers a peaceful retreat in a friendly suburban neighborhood.",
+      "price": "$700,000",
+      "status": "sale",
+      "area": "3,000 sq ft",
+      "location": "Seattle, Washington",
+      "facilities": ["Large Backyard", "Modern Kitchen", "Home Office"],
+      "image": "https://i.ibb.co/Rv3hhrJ/pexels-pixabay-280222.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Contemporary Townhouse with Rooftop Garden",
+      "segment_name": "Residential",
+      "description": "Modern townhouse featuring sleek design and a rooftop garden for urban relaxation.",
+      "price": "$900,000",
+      "status": "sale",
+      "area": "2,800 sq ft",
+      "location": "San Francisco, California",
+      "facilities": ["Rooftop Garden", "Smart Home Technology", "Garage"],
+      "image": "https://i.ibb.co/Cv0gpnR/pexels-g-l-i-k-19001783.jpg"
+    }
+  ]
+}

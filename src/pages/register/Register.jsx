@@ -7,11 +7,10 @@ const Register = () => {
   const { createUser, updateUserProfile } = useAuth();
 
   const [registerError, setRegisterError] = useState("");
-  const [success, setSuccess] = useState("");
+
   const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
-  const from = "/";
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -23,8 +22,6 @@ const Register = () => {
 
     // reset error
     setRegisterError("");
-    // reset success
-    setSuccess("");
 
     if (password.length < 6) {
       setRegisterError("Password should be at least 6 characters or longer");
@@ -44,12 +41,11 @@ const Register = () => {
     createUser(email, password)
       .then((userCredential) => {
         console.log(userCredential.user);
-        // Update user's profile
+
         updateUserProfile(name, image)
           .then(() => {
             alert("user created successfully");
-            setSuccess("User registered successfully!");
-            navigate(from);
+            navigate("/");
           })
           .catch((error) => {
             console.error("Error updating user profile:", error);
@@ -68,11 +64,7 @@ const Register = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleRegister} className="card-body">
@@ -138,7 +130,7 @@ const Register = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
               <label className="label">
-                Have an account?{" "}
+                Have you an account?{" "}
                 <Link to="/login" className="label-text-alt link link-hover">
                   Please Login
                 </Link>
@@ -147,7 +139,6 @@ const Register = () => {
             {registerError && (
               <p className="p-4 text-red-600">{registerError}</p>
             )}
-            {success && <p className="p-4 text-green-400">{success}</p>}
           </div>
         </div>
       </div>

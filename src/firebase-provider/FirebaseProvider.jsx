@@ -13,7 +13,6 @@ import auth from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 
-// social auth providers
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 
@@ -21,7 +20,6 @@ const FirebaseProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // create user
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
@@ -32,10 +30,14 @@ const FirebaseProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  // google login
   const googleLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
+  };
+
+  const githubLogin = () => {
+    setLoading(true);
+    return signInWithPopup(auth, githubProvider);
   };
 
   const updateUserProfile = (name, image) => {
@@ -45,13 +47,6 @@ const FirebaseProvider = ({ children }) => {
     });
   };
 
-  // github login
-  const githubLogin = () => {
-    setLoading(true);
-    return signInWithPopup(auth, githubProvider);
-  };
-
-  // observer
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {

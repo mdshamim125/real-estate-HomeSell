@@ -9,12 +9,16 @@ const Navbar = () => {
       <li>
         <Link to="/">Home</Link>
       </li>
-      <li>
-        <Link to="/update-profile">Update Profile</Link>
-      </li>
-      <li>
-        <Link to="/register">Register</Link>
-      </li>
+      {user && (
+        <li>
+          <Link to="/update-profile">Update Profile</Link>
+        </li>
+      )}
+      {!user && (
+        <li>
+          <Link to="/register">Register</Link>
+        </li>
+      )}
     </>
   );
   return (
@@ -50,29 +54,14 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        {/* <div className="navbar-end">
-          <button className="btn">Login</button>
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  title="name"
-                  alt="Tailwind CSS Navbar component"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
 
         <div className="navbar-end">
           {user ? (
             <div className="flex items-center">
-              <button onClick={logout} className="btn text-white font-bold  btn-accent mr-2">
+              <button
+                onClick={logout}
+                className="btn text-white font-bold  btn-accent mr-2"
+              >
                 Logout
               </button>
               <div className="dropdown dropdown-end">
@@ -91,7 +80,9 @@ const Navbar = () => {
             </div>
           ) : (
             <Link to="/login">
-              <button className="btn text-white font-bold  btn-accent">Login</button>
+              <button className="btn text-white font-bold  btn-accent">
+                Login
+              </button>
             </Link>
           )}
         </div>

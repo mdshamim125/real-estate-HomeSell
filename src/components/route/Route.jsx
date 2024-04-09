@@ -5,6 +5,7 @@ import Home from "../../pages/home/Home";
 import Login from "../../pages/login/Login";
 import Register from "../../pages/register/Register";
 import UpdateProfile from "../../pages/update-profile/UpdateProfile";
+import PrivateRoute from "../private-route/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -17,17 +18,17 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path:"/login",
-        element:<Login></Login>
+        path: "/login",
+        element: <Login></Login>,
       },
       {
-        path:"/register",
-        element:<Register></Register>
+        path: "/register",
+        element: <Register></Register>,
       },
       {
-        path:"/update-profile",
-        element:<UpdateProfile></UpdateProfile>
-      }
+        path: "/update-profile",
+        element: <UpdateProfile></UpdateProfile>,
+      },
 
       // {
       //   path: "/about-us",

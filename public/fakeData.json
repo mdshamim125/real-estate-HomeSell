@@ -1,5 +1,4 @@
-{
-  "residential": [
+[
     {
       "id": 1,
       "estate_title": "Downtown Apartment Living",
@@ -29,7 +28,7 @@
       "estate_title": "Cozy Townhouse",
       "segment_name": "Townhouses",
       "description": "A cozy townhouse perfect for small families or couples.",
-      "price": "$350,000",
+      "price": "$350,000 per year",
       "status": "sale",
       "area": "1,800 sq ft",
       "location": "Seattle, WA",
@@ -53,7 +52,7 @@
       "estate_title": "Spacious Family Home",
       "segment_name": "Single-family homes",
       "description": "A spacious and comfortable family home with modern amenities.",
-      "price": "$500,000",
+      "price": "$500,000 per year",
       "status": "sale",
       "area": "2,500 sq ft",
       "location": "Los Angeles, CA",
@@ -69,12 +68,8 @@
       "status": "rent",
       "area": "1,500 sq ft",
       "location": "Scottsdale, AZ",
-      "facilities": [
-        "Community Center",
-        "Fitness Classes",
-        "Golf Course Access"
-      ],
+      "facilities": ["Community Center", "Fitness Classes", "Golf Course Access"],
       "image": "https://i.ibb.co/Cv0gpnR/pexels-g-l-i-k-19001783.jpg"
     }
   ]
-}
+  

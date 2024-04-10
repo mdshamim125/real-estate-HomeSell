@@ -14,8 +14,8 @@ const Banner = () => {
           />
           <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
             <div className="text-white text-center">
-              <h2 className="text-4xl font-bold">Title 1</h2>
-              <p className="text-lg">Description 1</p>
+              <h2 className="text-4xl font-bold">Best Catagories for you</h2>
+              <p className="text-lg">We are ready for providing our best to you. Choose one which you or your family want</p>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

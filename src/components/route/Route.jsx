@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
           <CategoryDetails></CategoryDetails>
           // </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`${"/fakeData.json"}/${params.id}`),
+        loader: () => fetch("/fakeData.json"),
       },
     ],
   },

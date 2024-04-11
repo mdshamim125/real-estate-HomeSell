@@ -1,12 +1,16 @@
 import Banner from "../../components/banner/Banner";
 import { useLoaderData } from "react-router-dom";
 import Categories from "../../components/categories/Categories";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const data = useLoaderData();
   console.log(data);
   return (
     <div>
+      <Helmet>
+        <title>HomeSell | Home</title>
+      </Helmet>
       <Banner></Banner>
       <div className="mx-auto w-1/3 mt-10">
         <h1 className="text-4xl font-bold text-center mb-6">Estate</h1>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import useAuth from "./../../hooks/useAuth";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
   const { user, updateUserProfile } = useAuth();
@@ -31,6 +32,9 @@ const UpdateProfile = () => {
 
   return (
     <div className="bg-base-300 border-2 rounded-2xl mt-16">
+      <Helmet>
+        <title>HomeSell | Update-Profile</title>
+      </Helmet>
       <div className="container mx-auto px-4 py-8 ">
         <h2 className="text-2xl font-semibold mb-4">Edit Profile</h2>
         <div className="flex flex-col space-y-4">

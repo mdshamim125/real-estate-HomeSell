@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import useAuth from "./../../hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useAuth();
@@ -60,6 +61,9 @@ const Register = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>HomeSell | Registration</title>
+      </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const CategoryDetails = () => {
@@ -20,6 +21,9 @@ const CategoryDetails = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200 rounded-3xl">
+      <Helmet>
+        <title>Category details of id: {id}</title>
+      </Helmet>
       <div className="hero-content gap-6 flex-col lg:flex-row">
         <img src={image} className="w-full h-[550px] rounded-lg" />
         <div className="lg:w-1/3 md:w-1/2 w-full">

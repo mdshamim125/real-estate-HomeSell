@@ -14,6 +14,11 @@ const Navbar = () => {
           <Link to="/update-profile">Update Profile</Link>
         </li>
       )}
+      {user && (
+        <li>
+          <Link to="/contact-us">Contact Us</Link>
+        </li>
+      )}
       {!user && (
         <li>
           <Link to="/register">Register</Link>

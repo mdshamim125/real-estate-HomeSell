@@ -7,6 +7,7 @@ import Register from "../../pages/register/Register";
 import UpdateProfile from "../../pages/update-profile/UpdateProfile";
 import PrivateRoute from "./../private-route/PrivateRoute";
 import CategoryDetails from "../categoryDetails/CategoryDetails";
+import ContactUs from "../../Contact Us/ContactUs";
 
 export const router = createBrowserRouter([
   {
@@ -32,16 +33,20 @@ export const router = createBrowserRouter([
         element: <UpdateProfile></UpdateProfile>,
       },
 
-      // {
-      //   path: "/about-us",
-      //   element: <AboutUs></AboutUs>,
-      // },
+      {
+        path: "/contact-us",
+        element: (
+          <PrivateRoute>
+            <ContactUs></ContactUs>
+          </PrivateRoute>
+        ),
+      },
       {
         path: "/category-details/:id",
         element: (
-          // <PrivateRoute>
-          <CategoryDetails></CategoryDetails>
-          // </PrivateRoute>
+          <PrivateRoute>
+            <CategoryDetails></CategoryDetails>
+          </PrivateRoute>
         ),
         loader: () => fetch("/fakeData.json"),
       },

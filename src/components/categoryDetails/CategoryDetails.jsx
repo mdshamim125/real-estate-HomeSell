@@ -20,16 +20,16 @@ const CategoryDetails = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200 rounded-3xl">
-      <div className="hero-content gap-8 flex-col lg:flex-row">
+      <div className="hero-content gap-6 flex-col lg:flex-row">
         <img src={image} className="w-full h-[550px] rounded-lg" />
-        <div className="lg:w-1/4 md:w-1/2 w-full">
+        <div className="lg:w-1/3 md:w-1/2 w-full">
           <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold">
             {segment_name}
           </h1>
           <h2 className="lg:text-3xl md:text-2xl text-xl my-4 font-bold">
             {estate_title}
           </h2>
-          <p className="py-6 lg:text-xl">{description}</p>
+          <p className="my-3 lg:text-xl">{description}</p>
           <div className="lg:text-xl md:text-xl font-bold">
             <div className="flex gap-8">
               <p>status:</p>

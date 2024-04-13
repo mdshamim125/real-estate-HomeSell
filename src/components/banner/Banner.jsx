@@ -14,8 +14,14 @@ const Banner = () => {
           />
           <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
             <div className="text-white text-center">
-              <h2 className="text-4xl font-bold">Best Catagories for you</h2>
-              <p className="text-lg">We are ready for providing our best to you. Choose one which you or your family want</p>
+              <h2 className="text-4xl font-bold">
+                Best <span className="text-blue-900">Home Services</span> for
+                you
+              </h2>
+              <p className="text-lg">
+                We are ready for providing our best to you. Choose one which you
+                or your family want
+              </p>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -35,6 +41,18 @@ const Banner = () => {
             src="https://i.ibb.co/fvcKy3x/pexels-binyamin-mellish-186077.jpg"
             className="w-full"
           />
+          <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+            <div className="text-white text-center">
+              <h2 className="text-4xl font-bold">
+                Best <span className="text-green-600">Home Services</span> for
+                you
+              </h2>
+              <p className="text-lg">
+                We are ready for providing our best to you. Choose one which you
+                or your family want
+              </p>
+            </div>
+          </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide1" className="btn btn-circle">
               ❮
@@ -52,6 +70,18 @@ const Banner = () => {
             src="https://i.ibb.co/qmcYZLt/pexels-pixabay-280229.jpg"
             className="w-full"
           />
+          <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+            <div className="text- text-center">
+              <h2 className="text-4xl font-bold">
+                Best <span className="text-blue-900">Home Services</span> for
+                you
+              </h2>
+              <p className="text-lg">
+                We are ready for providing our best to you. Choose one which you
+                or your family want
+              </p>
+            </div>
+          </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide2" className="btn btn-circle">
               ❮

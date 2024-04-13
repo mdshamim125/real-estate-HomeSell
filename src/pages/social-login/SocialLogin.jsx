@@ -14,6 +14,7 @@ const SocialLogin = () => {
   const handleSocialLogin = (socialProvider) => {
     socialProvider().then((result) => {
       if (result.user) {
+        alert("successfully logged in")
         navigate(from);
       }
     });
@@ -21,7 +22,7 @@ const SocialLogin = () => {
   return (
     <>
       <div className="divider">continue with</div>
-      <div className="flex justify-around">
+      <div className="flex justify-around pb-6">
         <button
           onClick={() => handleSocialLogin(googleLogin)}
           className="btn btn-primary btn-sm btn-outline"

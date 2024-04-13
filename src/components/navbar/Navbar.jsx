@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
@@ -7,11 +7,11 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink className="mr-3" to="/">Home</NavLink>
       </li>
       {user && (
         <li>
-          <Link to="/update-profile">Update Profile</Link>
+          <NavLink className="mr-3" to="/update-profile">Update Profile</NavLink>
         </li>
       )}
       {user && (
@@ -28,10 +28,10 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-cyan-500 p-4">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-neutral lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -49,15 +49,17 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 text-white font-bold"
             >
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn text-base md:text-xl lg:text-2xl font-bold flex gap-0">
+            Home<span className="text-blue-600">Sell</span>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu menu-horizontal px-1 text-white font-bold">{links}</ul>
         </div>
 
         <div className="navbar-end">

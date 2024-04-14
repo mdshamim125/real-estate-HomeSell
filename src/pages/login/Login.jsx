@@ -12,11 +12,9 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
-
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state || "/";
-
 
   const onSubmit = (data) => {
     const { email, password } = data;
@@ -24,7 +22,7 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         if (result.user) {
-          alert("successfully signed in")
+          alert("successfully signed in");
           navigate(from);
         }
       })
@@ -36,13 +34,12 @@ const Login = () => {
   return (
     <>
       <div className="hero min-h-screen bg-base-200">
-      <Helmet>
-        <title>HomeSell | Login</title>
-      </Helmet>
+        <Helmet>
+          <title>HomeSell | Login</title>
+        </Helmet>
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
-            
           </div>
           <div className="card flex-shrink-0 lg:w-[600px] md:w-[500px] w-[300px] mt-6 shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -72,12 +69,14 @@ const Login = () => {
                 />
               </div>
               <div className="form-control mt-6 p-0">
-                <button className="btn btn-accent text-white font-bold">Login</button>
+                <button className="btn btn-accent text-white font-bold">
+                  Login
+                </button>
               </div>
               <label className="label">
                 Are You New here?{" "}
                 <Link to="/register" className="label-text-alt link link-hover">
-                  Create an account
+                  Create A New Account
                 </Link>
               </label>
             </form>

@@ -5,7 +5,7 @@ const Categories = ({ category }) => {
   console.log(category);
   return (
     <div>
-      <div className="col-span-1">
+      <div className="col-span-1 animate__animated animate__fadeInLeft animate__delay-2s">
         <div
           key={category.id}
           className="border p-4 transition hover:scale-105 border-opacity-30 rounded-xl group hover:no-underline focus:no-underline "

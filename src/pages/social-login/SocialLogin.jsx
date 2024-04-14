@@ -1,20 +1,18 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
-
 const SocialLogin = () => {
   const { googleLogin, githubLogin } = useAuth();
 
-  // navigation systems
   const navigate = useNavigate();
-    const location = useLocation();
-  
+  const location = useLocation();
+
   const from = location?.state || "/";
 
   const handleSocialLogin = (socialProvider) => {
     socialProvider().then((result) => {
       if (result.user) {
-        alert("successfully logged in")
+        alert("successfully logged in");
         navigate(from);
       }
     });
@@ -25,17 +23,16 @@ const SocialLogin = () => {
       <div className="flex justify-around pb-6">
         <button
           onClick={() => handleSocialLogin(googleLogin)}
-          className="btn btn-primary btn-sm btn-outline"
+          className="btn btn-primary"
         >
           Google
         </button>
         <button
           onClick={() => handleSocialLogin(githubLogin)}
-          className="btn btn-secondary btn-sm btn-outline"
+          className="btn btn-secondary"
         >
           Github
         </button>
-        
       </div>
     </>
   );

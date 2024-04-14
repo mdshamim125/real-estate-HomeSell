@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
+    <div data-aos="fade-up">
       <footer className="footer p-10 bg-cyan-700 text-neutral-content mt-[100px]">
         <nav>
           <h6 className="footer-title">Services</h6>

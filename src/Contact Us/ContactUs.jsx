@@ -31,7 +31,7 @@ const ContactUs = () => {
         <title>Contact Us</title>
       </Helmet>
       <div className="flex justify-center items-center h-screen w-full">
-        <div className="max-w-md w-full mx-auto">
+        <div className="max-w-md w-full mx-auto" data-aos="slide-right">
           <h2 className="text-3xl font-semibold mb-4">Contact Us</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -93,7 +93,7 @@ const ContactUs = () => {
             </button>
           </form>
         </div>
-        <div className="hidden md:block w-1/2">
+        <div className="hidden md:block w-1/2" data-aos="slide-left">
           <img
             src="https://i.ibb.co/ws2kq68/pexels-element-digital-1550337.jpg"
             alt="Contact Us"

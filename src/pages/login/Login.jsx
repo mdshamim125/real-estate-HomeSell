@@ -37,7 +37,7 @@ const Login = () => {
         <Helmet>
           <title>HomeSell | Login</title>
         </Helmet>
-        <div className="hero-content flex-col">
+        <div className="hero-content flex-col" data-aos="fade-up">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
           </div>

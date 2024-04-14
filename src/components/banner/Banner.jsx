@@ -2,7 +2,7 @@ import "animate.css";
 
 const Banner = () => {
   return (
-    <div>
+    <div data-aos="fade-up">
       <div className="carousel  h-[550px]">
         <div
           id="slide1"

@@ -64,7 +64,7 @@ const Register = () => {
       <Helmet>
         <title>HomeSell | Registration</title>
       </Helmet>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-200" data-aos="fade-down">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register Now!</h1>

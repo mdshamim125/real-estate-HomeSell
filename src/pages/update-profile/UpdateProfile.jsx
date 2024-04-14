@@ -31,7 +31,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="bg-base-300 border-2 rounded-2xl mt-16">
+    <div data-aos="flip-left" className="bg-base-300 border-2 rounded-2xl mt-16">
       <Helmet>
         <title>HomeSell | Update-Profile</title>
       </Helmet>

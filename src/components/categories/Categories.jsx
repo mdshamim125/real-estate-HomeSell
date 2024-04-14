@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Categories = ({ category }) => {
   console.log(category);
   return (
-    <div>
-      <div className="col-span-1 animate__animated animate__fadeInLeft animate__delay-2s">
+    <div data-aos="fade-up">
+      <div data-aos="fade-up" className="col-span-1 animate__animated animate__fadeInLeft animate__delay-2s">
         <div
           key={category.id}
           className="border p-4 transition hover:scale-105 border-opacity-30 rounded-xl group hover:no-underline focus:no-underline "
@@ -22,7 +22,9 @@ const Categories = ({ category }) => {
             <p>{category.area}</p>
           </div>
           <Link to={`/category-details/${category.id}`}>
-            <button className="btn btn-accent text-white font-bold w-full my-4">View Property</button>
+            <button className="btn btn-accent text-white font-bold w-full my-4">
+              View Property
+            </button>
           </Link>
           {/* <p className="text-gray-600">{category.location}</p> */}
           {/* <ul className="mt-2">

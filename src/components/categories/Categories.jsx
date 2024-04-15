@@ -26,14 +26,7 @@ const Categories = ({ category }) => {
               View Property
             </button>
           </Link>
-          {/* <p className="text-gray-600">{category.location}</p> */}
-          {/* <ul className="mt-2">
-            {category.facilities.map((facility, index) => (
-              <li key={index} className="text-gray-600">
-                {facility}
-              </li>
-            ))}
-          </ul> */}
+          
         </div>
       </div>
     </div>

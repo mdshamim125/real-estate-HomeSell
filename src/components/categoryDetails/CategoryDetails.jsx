@@ -40,6 +40,10 @@ const CategoryDetails = () => {
               <p>{status}</p>
             </div>
             <div className="flex gap-8">
+              <p>price:</p>
+              <p>{price}</p>
+            </div>
+            <div className="flex gap-8">
               <p>area:</p>
               <p>{area}</p>
             </div>

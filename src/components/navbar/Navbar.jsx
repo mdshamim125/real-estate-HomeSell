@@ -1,17 +1,22 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { BeatLoader } from "react-spinners";
 
 const Navbar = () => {
-  const { user, logout } = useAuth();
+  const { user, logout, loading } = useAuth();
   const links = (
     <>
       <li>
-        <NavLink className="mr-3" to="/">Home</NavLink>
+        <NavLink className="mr-3" to="/">
+          Home
+        </NavLink>
       </li>
       {user && (
         <li>
-          <NavLink className="mr-3" to="/update-profile">Update Profile</NavLink>
+          <NavLink className="mr-3" to="/update-profile">
+            Update Profile
+          </NavLink>
         </li>
       )}
       {user && (
@@ -31,7 +36,11 @@ const Navbar = () => {
       <div className="navbar bg-cyan-500 p-4">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-neutral lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-neutral lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -59,7 +68,9 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-white font-bold">{links}</ul>
+          <ul className="menu menu-horizontal px-1 text-white font-bold">
+            {links}
+          </ul>
         </div>
 
         <div className="navbar-end">
@@ -67,7 +78,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <button
                 onClick={logout}
-                className="btn text-white font-bold  btn-accent mr-2"
+                className="btn text-white font-bold btn-accent mr-2"
               >
                 Logout
               </button>
@@ -75,19 +86,22 @@ const Navbar = () => {
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
                     <img
-                      title={user?.displayName || "user name not found"}
+                      title={user.displayName || "user name not found"}
                       src={
-                        user?.photoURL ||
+                        user.photoURL ||
                         "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
                       }
+                      alt="User Avatar"
                     />
                   </div>
                 </label>
               </div>
             </div>
+          ) : loading ? (
+            <BeatLoader color="#36d7b7" margin={5} size={15} className="mr-2" />
           ) : (
             <Link to="/login">
-              <button className="btn text-white font-bold  btn-accent">
+              <button className="btn text-white font-bold btn-accent">
                 Login
               </button>
             </Link>

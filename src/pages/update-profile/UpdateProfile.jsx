@@ -3,9 +3,10 @@ import useAuth from "./../../hooks/useAuth";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { ScaleLoader } from "react-spinners";
 
 const UpdateProfile = () => {
-  const { user, updateUserProfile } = useAuth();
+  const { user, updateUserProfile, loading } = useAuth();
   const [name, setName] = useState("");
   const [photoURL, setPhotoURL] = useState("");
   const [error, setError] = useState("");
@@ -30,8 +31,22 @@ const UpdateProfile = () => {
       });
   };
 
+  if (loading) {
+    return (
+      <ScaleLoader
+        color="#36d7b7"
+        height={100}
+        width={49}
+        className="text-center mt-10"
+      />
+    );
+  }
+
   return (
-    <div data-aos="flip-left" className="bg-base-300 border-2 rounded-2xl mt-16">
+    <div
+      data-aos="flip-left"
+      className="bg-base-300 border-2 rounded-2xl mt-16"
+    >
       <Helmet>
         <title>HomeSell | Update-Profile</title>
       </Helmet>
@@ -44,6 +59,14 @@ const UpdateProfile = () => {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div>
+            <label className="text-lg font-medium">Email:</label>
+            <input
+              type="text"
+              value={user.email}
               className="input input-bordered w-full"
             />
           </div>

@@ -1,8 +1,23 @@
-# React + Vite
+# HomeSell
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to HomeSell! 
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Visit HomeSell]()
+
+## Features and Characteristics
+
+- **Comprehensive Residential Database**: Vist Our Residential HomeSell .
+  
+- **Personalized Collection of Home**: Different categories collections are available in our HomeSell.
+  
+- **Details of All Categories**: All the feactures and facilities are shown in our details section.
+  
+- **User-Friendly Interface**: It is the most attractive thing in this website.You can register, login our HomeSell and also you update your profile and also send us your important message.
+  
+- **Responsive Design**: Access HomeSell from any device, whether it's your desktop, tablet, or smartphone.
+
+- **npm Packages: 1.React Hook form, 2. Animate.css, 3. AOS Package**
+
+

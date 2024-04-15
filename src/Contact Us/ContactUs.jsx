@@ -7,7 +7,7 @@ const ContactUs = () => {
   console.log(user);
   const [formData, setFormData] = useState({
     name: `${user.displayName}`,
-    email: "",
+    email: `${user.email}`,
     message: "",
   });
 
@@ -93,7 +93,7 @@ const ContactUs = () => {
             </button>
           </form>
         </div>
-        <div className="hidden md:block w-1/2" data-aos="slide-left">
+        <div className="hidden lg:block w-1/2" data-aos="slide-left">
           <img
             src="https://i.ibb.co/ws2kq68/pexels-element-digital-1550337.jpg"
             alt="Contact Us"

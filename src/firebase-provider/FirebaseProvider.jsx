@@ -51,8 +51,8 @@ const FirebaseProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        setLoading(false);
       }
+      setLoading(false);
     });
     return () => unsubscribe();
   }, []);
@@ -60,7 +60,9 @@ const FirebaseProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     signOut(auth);
+    setLoading(false);
   };
+
 
   const allValues = {
     createUser,

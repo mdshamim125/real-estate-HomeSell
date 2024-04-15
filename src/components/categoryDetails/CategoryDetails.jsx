@@ -55,6 +55,7 @@ const CategoryDetails = () => {
               <p>facilities:</p>
               <p>{facilities}</p>
             </div>
+            <button className="btn w-full btn-accent text-white font-bold text-xl my-6">Contact Now</button>
           </div>
         </div>
       </div>

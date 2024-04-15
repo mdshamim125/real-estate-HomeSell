@@ -1,10 +1,11 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import { BeatLoader } from "react-spinners";
+import { BeatLoader} from "react-spinners";
 
 const Navbar = () => {
   const { user, logout, loading } = useAuth();
+
   const links = (
     <>
       <li>
@@ -31,6 +32,7 @@ const Navbar = () => {
       )}
     </>
   );
+
   return (
     <div>
       <div className="navbar bg-cyan-500 p-4">
@@ -58,7 +60,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 text-white font-bold"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 text-white font-bold bg-cyan-500"
             >
               {links}
             </ul>
@@ -74,37 +76,46 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
-          {user ? (
-            <div className="flex items-center">
-              <button
-                onClick={logout}
-                className="btn text-white font-bold btn-accent mr-2"
-              >
-                Logout
-              </button>
-              <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                  <div className="w-10 rounded-full">
-                    <img
-                      title={user.displayName || "user name not found"}
-                      src={
-                        user.photoURL ||
-                        "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                      }
-                      alt="User Avatar"
-                    />
-                  </div>
-                </label>
-              </div>
-            </div>
-          ) : loading ? (
-            <BeatLoader color="#36d7b7" margin={5} size={15} className="mr-2" />
+          {loading && !user ? (
+            <BeatLoader color="#36d7b7" />
           ) : (
-            <Link to="/login">
-              <button className="btn text-white font-bold btn-accent">
-                Login
-              </button>
-            </Link>
+            <>
+              {user ? (
+                <>
+                  <Link to="/">
+                    <button
+                      onClick={logout}
+                      className="btn text-white font-bold btn-accent mr-2"
+                    >
+                      Logout
+                    </button>
+                  </Link>
+                  <div className="dropdown dropdown-end">
+                    <label
+                      tabIndex={0}
+                      className="btn btn-ghost btn-circle avatar"
+                    >
+                      <div className="w-10 rounded-full">
+                        <img
+                          title={user.displayName || ""}
+                          src={
+                            user.photoURL ||
+                            "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                          }
+                          alt="User Avatar"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </>
+              ) : (
+                <Link to="/login">
+                  <button className="btn text-white font-bold btn-accent">
+                    Login
+                  </button>
+                </Link>
+              )}
+            </>
           )}
         </div>
       </div>

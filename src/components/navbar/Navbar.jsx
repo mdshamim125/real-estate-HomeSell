@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import { BeatLoader} from "react-spinners";
+import { BeatLoader } from "react-spinners";
 
 const Navbar = () => {
   const { user, logout, loading } = useAuth();
